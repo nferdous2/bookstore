@@ -1,0 +1,76 @@
+
+  [
+    {
+        "name": "Ghost Forest",
+        "authorName": "Pik-Shuen Fung",
+        "image": "https://images4.penguinrandomhouse.com/cover/9780593230985",
+        "publisher": "One World",
+        "publicationYear": 2021,
+        "genre": "Fiction"
+    },
+    {
+        "name": "Navigate Your Stars",
+        "authorName": "Jesmyn Ward",
+        "image": "https://m.media-amazon.com/images/I/81Yf89ofn-L._AC_UF1000,1000_QL80_.jpg",
+        "publisher": "Scribner",
+        "publicationYear": 2020,
+        "genre": "Memoir"
+    },
+    {
+        "name": "The House on Mango Street",
+        "authorName": "Sandra Cisneros",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348245688i/139253.jpg",
+        "publisher": "Vintage",
+        "publicationYear": 1984,
+        "genre": "Fiction"
+    },
+    {
+        "name": "The Ones Who Don’t Say They Love You",
+        "authorName": "Maurice Carlos Ruffin",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1608040974l/56020849.jpg",
+        "publisher": "One World",
+        "publicationYear": 2021,
+        "genre": "Short Stories"
+    },
+    {
+        "name": "Heart Berries",
+        "authorName": "Terese Marie Mailhot",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1521733690i/35840657.jpg",
+        "publisher": "Counterpoint",
+        "publicationYear": 2018,
+        "genre": "Memoir"
+    },
+    {
+        "name": "The Magical Language of Others",
+        "authorName": "E. J. Koh",
+        "image": "https://tinhouse.com/wp-content/uploads/2023/09/9781951142278-20230714201733.jpg",
+        "publisher": "Tin House Books",
+        "publicationYear": 2020,
+        "genre": "Memoir"
+    },
+    {
+        "name": "Pedro Páramo",
+        "authorName": "Juan Rulfo",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1500663791i/38787.jpg",
+        "publisher": "Grove Press",
+        "publicationYear": 1955,
+        "genre": "Fiction"
+    },
+    {
+        "name": "You Better Be Lightning",
+        "authorName": "Andrea Gibson",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625108383i/58464584.jpg",
+        "publisher": "Write Bloody Publishing",
+        "publicationYear": 2018,
+        "genre": "Poetry"
+    },
+
+    {
+        "name": "The Bluest Eye",
+        "authorName": "Toni Morrison",
+        "image": "https://womensprizeforfiction.co.uk/wp-content/uploads/The-Bluest-Eye.jpeg",
+        "publisher": "Holt, Rinehart and Winston",
+        "publicationYear": 1970,
+        "genre": "Fiction"
+    }
+]
