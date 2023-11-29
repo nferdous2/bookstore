@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Home from "../Components/Home/Home";
 import Details from "../Components/Books/Details";
 import AddBook from "../Components/Books/AddBook";
+import Books from "../Components/Books/Books";
 
 const router = createBrowserRouter([
 
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>
+
+            },
+            {
+                path: '/books',
+                element: <Books/>
 
             },
             {

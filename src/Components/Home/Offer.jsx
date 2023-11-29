@@ -8,8 +8,9 @@ import i4 from "../../assets/shipped.png"
 const Offer = () => {
     return (
         <div className='mt-5'>
-      <Container>
-      
+      <Container className='mt-2 mb-3'>
+      <p className='fw-bold fs-1 text-center mt-5 mb-5'>Our<span style={{ color: "#242424CC" }}> Offers</span></p>
+
     <Row>
         <Col md={8} xs={12}>
             <Card className="text-white">
@@ -41,10 +42,9 @@ const Offer = () => {
     </Row>
 </Container>
 
-            <div>
-                <div className="text-center container">
+                <div className="text-center container mt-3 mb-3">
                     <div className="m-3">
-                        <h1>Why Choose Us</h1>
+                        <h1>Why <span style={{ color: "#242424CC" }}>Choose</span> Us</h1>
                         <p className="m-3 fs-4" style={{ color: "#242424CC" }}>
                             We provide a wide range of books, exclusive discounts, and <br />A user-friendly shopping experience to meet all your reading needs.
                         </p>
@@ -74,7 +74,6 @@ const Offer = () => {
                 </div>
 
             </div>
-        </div>
 
     );
 };

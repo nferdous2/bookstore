@@ -3,7 +3,7 @@ import { Accordion } from "react-bootstrap";
 const Question = () => {
     return (
         <div className="container mt-5">
-            <p className='fw-bold fs-1 text-center mt-5 mb-5'>F <span style={{ color: "orange" }}>A</span> Q</p>
+            <p className='fw-bold fs-1 text-center mt-5 mb-5'>F <span style={{ color: "#242424CC" }}>A</span> Q</p>
             <div className="mt-2 mb-5">
                 <div className="row g-8">
                     <div className="col-md-7">
