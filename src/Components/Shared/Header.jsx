@@ -25,8 +25,11 @@ const Header = () => {
             <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/"><h5>Home</h5></Link>
             <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/"><h5>About Us</h5></Link>
             <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/books"><h5>Books</h5></Link>
+            <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/add"><h5>Add Book</h5></Link>
+
             <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/"><h5>Login</h5></Link>
             <Link className='p-3  fs-5 fw-bold text-decoration-none' style={{color:"black"}} to="/"><h5>Contact Us</h5></Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

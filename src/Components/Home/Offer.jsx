@@ -7,8 +7,9 @@ import i3 from "../../assets/coupon.png";
 import i4 from "../../assets/shipped.png"
 const Offer = () => {
     return (
-        <div>
+        <div className='mt-5'>
       <Container>
+      
     <Row>
         <Col md={8} xs={12}>
             <Card className="text-white">

@@ -1,31 +1,14 @@
-import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useLoaderData, } from "react-router-dom";
+
 
 const Details = () => {
-  const { _id } = useParams();
-  const [product, setProduct] = useState({});
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:8000/books/${_id}`);
-        const data = await response.json();
-        setProduct(data);
-      } catch (error) {
-        console.error("Error fetching book details:", error);
-      }
-    };
-  
-    fetchData();
-  }, [_id]);
-  
-//   useEffect(() => {
-//     const products = localStorage.getItem("product");
-//     setProduct(JSON.parse(products));
-//   }, []);
+  const book = useLoaderData();
+  const{name,image,publicationYear,publisher,authorName,genre} = book;
+
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/books/${_id}`, {
+      const response = await fetch(`http://localhost:3000/books/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +26,7 @@ const Details = () => {
   const handleDelete = async () => {
     try {
 
-      const response = await fetch(`http://localhost:8000/books/${_id}`, {
+      const response = await fetch(`http://localhost:3000/books/${_id}`, {
         method: "DELETE",
       });
       const data = await response.json();
@@ -56,25 +39,25 @@ const Details = () => {
   return (
     <div className="container mb-5">
       <Card className="mt-4" style={{ maxWidth: "30rem", margin: "auto" }}>
-        <Card.Img variant="top" src={product.image} />
+        <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
+          <Card.Title>{name}</Card.Title>
           <Card.Text>
             <p className="fs-5">
               <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
-              {product.publisher}
+              {publisher}
             </p>
             <p className="fs-5">
               <span style={{ fontWeight: "bold" }}>Publication Year: </span>
-              {product.publicationYear}
+              {publicationYear}
             </p>
             <p className="fs-5">
               <span style={{ fontWeight: "bold" }}>Genre: </span>
-              {product.genre}
+              {genre}
             </p>
             <p className="fs-5">
               <span style={{ fontWeight: "bold" }}>Author Name: </span>
-              {product.authorName}
+              {authorName}
             </p>
           </Card.Text>
         </Card.Body>
@@ -95,3 +78,16 @@ const Details = () => {
 };
 
 export default Details;
+
+
+// const Details = () => {
+//   const book = useLoaderData();
+//   const{name,_id} = book;
+//   return (
+//     <div>
+//       name: {name}
+//     </div>
+//   );
+// };
+
+// export default Details;

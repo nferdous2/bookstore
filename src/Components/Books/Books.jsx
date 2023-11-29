@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap"; // Import Col from react-bootstrap
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../Style/Style.css"
 
 const Books = () => {
@@ -9,14 +9,13 @@ const Books = () => {
     const navigate = useNavigate();
     //fetching the books
     useEffect(() => {
-        fetch('http://localhost:8000/books')
+        fetch('http://localhost:3000/books')
             .then(res => res.json())
             .then(data => setBooks(data));
     }, []);
 
     return (
         <div>
-            <h2 className='m-3 text-center p-2 text-white'><span className='heading'>O</span>ur <span className='heading'>C</span>ollections</h2>
 
             <div className="container">
                 <div className="btn-group d-flex justify-content-between">
@@ -44,11 +43,15 @@ const Books = () => {
                                             <Card.Text>
                                                 Author Name: {book.authorName}
                                             </Card.Text>
+                                            <Link to ={`/details/${book._id}`}>
+                                            <button className=" custom-btn btn btn-dark me-3 fw-semibold fs-5 p-2 ">All</button>
+
+                                            </Link>
                                             <Button
                                                 variant="dark"
                                                 style={{ margin: 'auto', width: "50%" }}
                                                 onClick={() => {
-                                                    navigate(`/details/${book._id}`);
+                                                    navigate(`/details/${book.id}`);
                                                 }}
                                             >
                                                 Details
