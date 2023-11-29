@@ -1,12 +1,11 @@
 
 import { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap"; // Import Col from react-bootstrap
-import { Link, useNavigate } from "react-router-dom";
+import { Card, } from "react-bootstrap"; // Import Col from react-bootstrap
+import { Link, } from "react-router-dom";
 import "../../Style/Style.css"
 
 const Books = () => {
     const [books, setBooks] = useState([]);
-    const navigate = useNavigate();
     //fetching the books
     useEffect(() => {
         fetch('http://localhost:3000/books')
@@ -44,18 +43,10 @@ const Books = () => {
                                                 Author Name: {book.authorName}
                                             </Card.Text>
                                             <Link to ={`/details/${book._id}`}>
-                                            <button className=" custom-btn btn btn-dark me-3 fw-semibold fs-5 p-2 ">All</button>
+                                            <button className=" custom-btn btn btn-dark me-3 fw-semibold fs-5 p-2 w-50">See Details</button>
 
                                             </Link>
-                                            <Button
-                                                variant="dark"
-                                                style={{ margin: 'auto', width: "50%" }}
-                                                onClick={() => {
-                                                    navigate(`/details/${book.id}`);
-                                                }}
-                                            >
-                                                Details
-                                            </Button>
+                                        
                                         </Card.Body>
 
                                     </Card>

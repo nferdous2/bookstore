@@ -20,7 +20,7 @@ const AddBook = () => {
     
           if (result.insertedId) {
             alert("Book added successfully");
-            window.href="/"
+            window.location.href="/";
             reset();
           } 
         } catch (error) {
