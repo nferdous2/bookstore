@@ -28,8 +28,7 @@ const Books = () => {
                     <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">Love Stories</button>
                 </div>
 
-
-                <div className="row">
+                <div className="row mt-5">
                     <div className="col-md-1">
                     </div>
                     <div className="col-md-10">
