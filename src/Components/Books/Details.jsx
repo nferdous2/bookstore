@@ -1,77 +1,12 @@
-// import { Button, Card } from "react-bootstrap";
-// import { useLoaderData, } from "react-router-dom";
 
-
-// const Details = () => {
-//   const book = useLoaderData();
-//   const{_id,name,image,publicationYear,publisher,authorName,genre} = book;
-
-
-//   const handleDelete = async () => {
-//     try {
-
-//       const response = await fetch(`http://localhost:3000/books/${_id}`, {
-//         method: "DELETE",
-//       });
-//       const data = await response.json();
-//       if (data.deletedCount>0) {
-//         alert("Book deletedsuccessfully");
-//         window.location.href="/";
-//       } 
-//       console.log(data.message)
-//    } catch (error) {
-//       console.error("Error deleting book:", error);
-//     }
-//   };
-
-//   return (
-//     <div className="container mb-5">
-//       <Card className="mt-4" style={{ maxWidth: "30rem", margin: "auto" }}>
-//         <Card.Img variant="top" src={image} />
-//         <Card.Body>
-//           <Card.Title>{name}</Card.Title>
-//           <Card.Text>
-//             <p className="fs-5">
-//               <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
-//               {publisher}
-//             </p>
-//             <p className="fs-5">
-//               <span style={{ fontWeight: "bold" }}>Publication Year: </span>
-//               {publicationYear}
-//             </p>
-//             <p className="fs-5">
-//               <span style={{ fontWeight: "bold" }}>Genre: </span>
-//               {genre}
-//             </p>
-//             <p className="fs-5">
-//               <span style={{ fontWeight: "bold" }}>Author Name: </span>
-//               {authorName}
-//             </p>
-//           </Card.Text>
-//         </Card.Body>
-//         <Card.Body>
-//           <Button variant="primary" className="me-2">
-//             Update
-//           </Button>
-//           <Button variant="danger" onClick={handleDelete}>
-//             Delete
-//           </Button>
-//         </Card.Body>
-//         <Card.Body>
-
-//         </Card.Body>
-//       </Card>
-//     </div>
-//   );
-// };
-
-// export default Details;
 import { useState } from "react";
 import { Button, Card, Form, Modal } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
+//form data initialization
   const initialFormData = {
+    image:"",
     name: "",
     publisher: "",
     publicationYear: "",
@@ -80,11 +15,12 @@ const Details = () => {
   };
 
   const [formData, setFormData] = useState(initialFormData);
+  //modal
   const [showModal, setShowModal] = useState(false);
-
+//get data di wise
   const book = useLoaderData();
   const { _id, name, image, publicationYear, publisher, authorName, genre } = book;
-
+//delete data
   const handleDelete = async () => {
     try {
       const response = await fetch(`http://localhost:3000/books/${_id}`, {
@@ -100,7 +36,7 @@ const Details = () => {
       console.error("Error deleting book:", error);
     }
   };
-
+// update data 
   const handleUpdate = async () => {
     try {
       const response = await fetch(`http://localhost:3000/books/${_id}`, {
@@ -113,7 +49,7 @@ const Details = () => {
       const data = await response.json();
       console.log(data.message);
 
-      // Close the modal after updating
+      // Close the modal 
       setShowModal(false);
       window.location.reload();
 
