@@ -115,6 +115,8 @@ const Details = () => {
 
       // Close the modal after updating
       setShowModal(false);
+      window.location.reload();
+
     } catch (error) {
       console.error("Error updating book:", error);
     }
@@ -127,6 +129,8 @@ const Details = () => {
       publicationYear,
       genre,
       authorName,
+      image, 
+
     });
     setShowModal(true);
   };
