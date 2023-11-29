@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         path: '/details/:id',
        
         element: <Details></Details>,
-        loader:({params})=>fetch(`http://localhost:3000/books/${params.id}`)
+        loader:({params})=>fetch(`https://books-5ey6.onrender.com/books/${params.id}`)
       },
       
             {

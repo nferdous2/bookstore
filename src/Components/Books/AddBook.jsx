@@ -8,7 +8,7 @@ const AddBook = () => {
     const onSubmit = async (data) => {
         console.log(data);
         try {
-          const response = await fetch("http://localhost:3000/books", {
+          const response = await fetch("https://books-5ey6.onrender.com/books", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

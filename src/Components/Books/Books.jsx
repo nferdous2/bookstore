@@ -8,7 +8,7 @@ const Books = () => {
     const [books, setBooks] = useState([]);
     //fetching the books
     useEffect(() => {
-        fetch('http://localhost:3000/books')
+        fetch('https://books-5ey6.onrender.com/books')
             .then(res => res.json())
             .then(data => setBooks(data));
     }, []);
@@ -19,14 +19,15 @@ const Books = () => {
             <div>
                 <h1 className="text-center m-4" style={{ color: "#242424CC" }}> Our Books Collection</h1>
             </div>
-            <div className="btn-group d-flex justify-content-between">
-                <button className=" custom-btn btn btn-dark me-3 fw-semibold fs-5 p-2 ">All</button>
-                <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">Best Sellers</button>
-                <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">Fantasy</button>
-                <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">History</button>
-                <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">Art</button>
-                <button className=" custom-btn btn btn-light me-3 fw-semibold fs-5 p-2 ">Love Stories</button>
-            </div>
+            <div className="btn-group d-flex flex-wrap justify-content-center">
+    <button className="custom-btn btn btn-dark mb-2 fw-semibold fs-5 p-2">All</button>
+    <button className="custom-btn btn btn-light mb-2 fw-semibold fs-5 p-2">Best Sellers</button>
+    <button className="custom-btn btn btn-light mb-2 fw-semibold fs-5 p-2">Fantasy</button>
+    <button className="custom-btn btn btn-light mb-2 fw-semibold fs-5 p-2">History</button>
+    <button className="custom-btn btn btn-light mb-2 fw-semibold fs-5 p-2">Art</button>
+    <button className="custom-btn btn btn-light mb-2 fw-semibold fs-5 p-2">Love Stories</button>
+</div>
+
 
             <div className="row mt-5">
                 <div className="col-md-1">

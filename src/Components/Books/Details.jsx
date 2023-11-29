@@ -23,7 +23,7 @@ const Details = () => {
 //delete data
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/books/${_id}`, {
+      const response = await fetch(`https://books-5ey6.onrender.com/books/${_id}`, {
         method: "DELETE",
       });
       const data = await response.json();
@@ -39,7 +39,7 @@ const Details = () => {
 // update data 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/books/${_id}`, {
+      const response = await fetch(`https://books-5ey6.onrender.com/books/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
